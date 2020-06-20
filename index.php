@@ -1,9 +1,12 @@
 <?php
 
+require 'vendor/autoload.php';
+
+use Challenge\Formattable\StarcorpFormatter;
+
+$formatter = new StarcorpFormatter;
+
 for ($i=1; $i<=100; $i++) {
-    echo str_repeat((string)$i, ($i%3!=0&&$i%5!=0));
-    echo str_repeat('Starcorp', ($i%3==0&&$i%5!=0));
-    echo str_repeat('TI', ($i%5==0&&$i%3!=0));
-    echo str_repeat('Starcorpianos', ($i%15==0));
-    echo '<br>';
+    echo $formatter->format($i);
+    if ($i<100) echo ', ';
 }
