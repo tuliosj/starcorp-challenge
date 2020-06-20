@@ -15,7 +15,7 @@ class StarcorpFormatter implements Formattable {
 
         return  str_repeat((string)$number, !($dividesByThree || $dividesByFive)) .
                 str_repeat('Starcorp',      $dividesByThree && !$dividesByFive  ) .
-                str_repeat('TI',            !$dividesByThree && $dividesByFive  ) .
+                str_repeat('IT',            !$dividesByThree && $dividesByFive  ) .
                 str_repeat('Starcorpianos', $dividesByThree && $dividesByFive   );
     }
 }
